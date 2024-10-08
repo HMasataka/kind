@@ -4,6 +4,9 @@ name: kindcluster
 nodes:
   - role: control-plane
     image: kindest/node:v1.31.1
+    extraPortMappings:
+      - containerPort: 30080
+        hostPort: 80
   - role: control-plane
     image: kindest/node:v1.31.1
   - role: control-plane
